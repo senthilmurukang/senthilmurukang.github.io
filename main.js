@@ -2,7 +2,7 @@ $(document).ready(() => {
     $('.contact_me').click(() => {
 
     });
-    $('#submit_contact_info').click(() => {
+    $('#submit_contact_info').click((event) => {
         event.preventDefault();
         let target = $(event.target);
         let contactEmail = target.parent().parent().find('#contact_email').val();
