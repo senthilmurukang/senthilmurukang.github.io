@@ -8,6 +8,7 @@ class RequestTransporter {
      * @property {Function} callback - Callback function
      * @property {Function} errorCallback - Callback function for errors
      * @property {String} contentType - Content type of the data
+     * @property {Boolean} crossDomain - Is cross domain call
      */
     /**
      * Ajax Post request wrapper
@@ -20,6 +21,7 @@ class RequestTransporter {
             url: url,
             data: data,
             method: "POST",
+            crossDomain: options.crossDomain ? options.crossDomain : false,
             contentType: options.contentType ? options.contentType : "application/x-www-form-urlencoded",
             dataType: options.dataType ? options.dataType : "",
             success: (data) => {
