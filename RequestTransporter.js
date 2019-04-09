@@ -20,6 +20,7 @@ class RequestTransporter {
         $.ajax({
             url: url,
             data: data,
+            processData: "processData" in options ? options.processData: false,
             method: "POST",
             crossDomain: options.crossDomain ? options.crossDomain : false,
             contentType: options.contentType ? options.contentType : "application/x-www-form-urlencoded;charset=utf-8",
