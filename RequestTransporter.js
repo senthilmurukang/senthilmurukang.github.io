@@ -22,14 +22,14 @@ class RequestTransporter {
             data: data,
             processData: "processData" in options ? options.processData: false,
             method: "POST",
-            crossDomain: options.crossDomain ? options.crossDomain : false,
-            contentType: options.contentType ? options.contentType : "application/x-www-form-urlencoded;charset=utf-8",
-            dataType: options.dataType ? options.dataType : "",
+            crossDomain: "crossDomain" in options ? options.crossDomain : false,
+            contentType: "contentType" in options ? options.contentType : "application/x-www-form-urlencoded;charset=utf-8",
+            dataType: "dataType" in options ? options.dataType : "",
             success: (data) => {
-                if (options.callback) options.callback(data)
+                if ("callback" in options) options.callback(data)
             },
             error: (error) => {
-                if (options.errorCallback) options.errorCallback(error);
+                if ("errorCallback" in options) options.errorCallback(error);
             }
         })
     }
