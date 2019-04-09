@@ -19,8 +19,7 @@ $(document).ready(() => {
                 console.log(data)
             },
             crossDomain: true,
-            dataType: "json",
-            contentType: "application/json"
+            contentType: "application/json;charset=utf-8"
         })
     });
 });

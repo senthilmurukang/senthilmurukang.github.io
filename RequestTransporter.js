@@ -22,13 +22,13 @@ class RequestTransporter {
             data: data,
             method: "POST",
             crossDomain: options.crossDomain ? options.crossDomain : false,
-            contentType: options.contentType ? options.contentType : "application/x-www-form-urlencoded",
+            contentType: options.contentType ? options.contentType : "application/x-www-form-urlencoded;charset=utf-8",
             dataType: options.dataType ? options.dataType : "",
             success: (data) => {
                 if (options.callback) options.callback(data)
             },
-            error: (error) =>{
-                if(options.errorCallback) options.errorCallback(error);
+            error: (error) => {
+                if (options.errorCallback) options.errorCallback(error);
             }
         })
     }
