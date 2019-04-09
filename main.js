@@ -9,17 +9,17 @@ $(document).ready(() => {
         let contactLastName = target.parent().parent().find('#contact_last_name').val();
         let contactEmail = target.parent().parent().find('#contact_email').val();
         let contactPhoneNumber = target.parent().parent().find('#contact_phone_number').val();
-        requestTransporter.post("https://thecuriouselectronicsengineer.appspot.com/api/StoreVisitorDetails", {
+        requestTransporter.post("https://thecuriouselectronicsengineer.appspot.com/api/StoreVisitorDetails", utils.toTransport({
             firstName: contactFirstName,
             lastName: contactLastName,
             email: contactEmail,
             phoneNumber: contactPhoneNumber
-        }, {
-            callback: (data) => {
-                console.log(data)
-            },
-            crossDomain: true,
-            contentType: "application/json;charset=utf-8"
-        })
+        }), {
+                callback: (data) => {
+                    console.log(data)
+                },
+                crossDomain: true,
+                contentType: "application/json;charset=utf-8"
+            })
     });
 });
