@@ -7,3 +7,6 @@ class Utilities {
     return encodeURIComponent(processResult);
   }
 }
+
+if (typeof module !== 'undefined' && module.exports)
+  exports = module.exports = Utilities;
