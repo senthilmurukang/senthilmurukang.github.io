@@ -5,7 +5,7 @@ export default function App() {
     <div className="App">
       <h1>Senthil Murugan Gnanasekaran</h1>
       <main className="container">
-        <code>An adaptable individual with good management and communication skills.</code>
+        <code>An inquisitive individual with good communication and management skills.</code>
       </main>
     </div>
   );
